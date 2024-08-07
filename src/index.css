@@ -1,13 +1,115 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+.show-container{
+  display:flex;
+  justify-content: center;
+}
+.Shows{
+  width:80%;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.show-card {
+  max-width: 250px;
+  min-width: 200px;
+  border-radius: 10px;
+  padding:15px;
+  overflow:hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin:20px;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.show-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
+.image {
+  position: relative;
+  max-height:200px;
+  overflow:hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.image img {
+  width:100%;
+  display:block;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.show-name {
+  display:flex;
+  align-items: center;
+  text-align:center;
+  background-color:#f9f9f975;
+  font-family: 'Poppins';
+  width:100%;
+}
+.show-name h2 {
+  padding:5px;
+  margin:auto;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 1rem 0; /* Further reduced margin */
+}
+h1 {
+  margin: 0;
+  color: black;
+  font-family: "Poppins";
+  padding:10px;
+}
+
+.search {
+  width: 80%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1.5rem 1.75rem;
+  border-radius: 3rem;
+  background: #e3e3e3;;
+}
+
+.search input {
+  flex: 1;
+  border: none;
+  font-size: 1.5rem;
+  font-family: "Poppins";
+  font-weight: 500;
+  padding-right: 1rem;
+
+  outline: none;
+  color: #949698;;
+  background: #e3e3e3;
+}
+
+.search input::placeholder {
+  color: #949698;
+  opacity: 1; /* Make sure the placeholder is fully opaque */
+}
+
+.search img {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  filter: invert(92%) sepia(100%) saturate(500%) hue-rotate(1deg) brightness(106%) contrast(100%);
+}
+
